@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: kc-resqpet-auth
+
+info:
+  app:
+    name: ${spring.application.name}
+
+microservice:
+  serverUrl: http://localhost:8081
+
+keycloak:
+  serverUrl: http://localhost:8080
+  defaultUrl: https://www.keycloak.org/app/
+  #  defaultUrl: http://localhost:3000/
+  password: admin
+#  password: kc-resqpet-auth
+  username: admin
+  admin:
+    realm: master
+    clientId: admin-cli
+  kc-resqpet-auth:
+    realm: kc-resqpet-auth
+    fe-resqpet:
+      client: fe-resqpet
+      clientSecret: lSYGKMcAMvai9U9xc6rgl0HGGNKOyt2z
